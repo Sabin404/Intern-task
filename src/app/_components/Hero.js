@@ -7,8 +7,8 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <main className="bg-btnbg/5  overflow-hidden container mx-auto">
-      <section className="relative container mx-auto px-0 md:px-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
+    <main className="bg-btnbg/5  overflow-hidden py-1 ">
+      <section className="relative container mx-auto  px-0 md:px-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
         <Image
           src={pattern}
           width={481}
@@ -26,7 +26,7 @@ const Hero = () => {
             Practice at home
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-herotext leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold font-sans text-herotext leading-tight">
             A Gentle Start to <br /> Yoga & Meditation
           </h1>
 
