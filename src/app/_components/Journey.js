@@ -1,6 +1,5 @@
-import { Card, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Clock, Leaf } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import JourneyCard from "./JourneyCard";
 import img from "@/images/Vector.png";
 import img1 from "@/images/clock.png";
@@ -28,28 +27,28 @@ const Journey = () => {
   ];
 
   return (
-    <section className="bg-sectionbg py-10">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-3xl font-semibold text-white mb-3">
+    <section className="bg-bg-section-primary py-16">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="display-medium font-semibold text-white mb-3 font-robotoslab">
             New to Yoga or Meditation?
           </h2>
-          <p className="text-white text-sm">
+          <p className="text-white title-large font-normal font-roboto">
             Not sure where to begin? We {'"'}ll help you take your first step
             with simple guidance and easy practices.
           </p>
         </div>
 
-        <div className="flex justify-center items-center gap-6">
+        <div className="flex flex-col md:flex-row gap-6 justify-evenly">
           {cards.map((card, index) => (
             <JourneyCard key={index} {...card} />
           ))}
         </div>
 
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center mt-10">
           <Button
             variant="secondary"
-            className="rounded py-6 px-4 gap-2 text-btnbg"
+            className="rounded font-roboto title-medium py-5 px-6 gap-2 text-bg-button-primary "
           >
             Start Your Journey
             <ArrowRight className="h-4 w-4" />

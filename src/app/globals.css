@@ -3,8 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -47,16 +45,19 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --font-sans: var(--font-google-sans-flex);
-  --color-inputbg: #F0F1F0;
-  --color-btnbg:#62826B;
-  --color-sectionbg:#62826B;
-  --color-herotext:#3A4E40;
-  --color-primarydeep:#D9E1DB;
-  --color-boxborder:#BBC9BF;
+  --font-inter: var(--font-inter);
+  --font-roboto: var(--font-roboto);
+  --font-robotoslab: var(--font-robotoslab);
+
+  --color-bg-input: #f0f1f0;
+  --color-bg-button-primary: #62826b;
+  --color-bg-section-primary: #62826b;
+  --color-text-primary-hero: #3a4e40;
+  --color-bg-primary-muted: #d9e1db;
+  --color-border-muted: #bbc9bf;
 }
 
 :root {
-  
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -89,6 +90,41 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+}
+
+.display-lg {
+  font-size: 57px;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.title-large {
+  font-size: 22px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.body-large {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.title-medium {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.display-medium {
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: 600;
+}
+.headline-small {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
 }
 
 .dark {
