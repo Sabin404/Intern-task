@@ -28,7 +28,7 @@ const Journey = () => {
 
   return (
     <section className="bg-bg-section-primary py-16">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto ">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="display-medium font-semibold text-white mb-3 font-robotoslab">
             New to Yoga or Meditation?
@@ -39,7 +39,7 @@ const Journey = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 justify-evenly">
+        <div className="flex flex-col md:flex-row gap-6 justify-between">
           {cards.map((card, index) => (
             <JourneyCard key={index} {...card} />
           ))}

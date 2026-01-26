@@ -55,6 +55,9 @@
   --color-text-primary-hero: #3a4e40;
   --color-bg-primary-muted: #d9e1db;
   --color-border-muted: #bbc9bf;
+  --color-text-secondary-muted: #2d302d;
+  --color-section-secondary: #e9dcc5;
+  /* --text-head: 45px; */
 }
 
 :root {
@@ -126,6 +129,11 @@
   line-height: 32px;
   font-weight: 600;
 }
+.headline-medium {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -159,6 +167,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer utilities {
+  .clip-custom-shape {
+    clip-path: path(
+      "M10,0H90A10,10 0,0,1 100,10V79A4,4 0,0,1 96,83H50A4,4 0,0,0 46,87V96A4,4 0,0,1 42,100H10A10,10 0,0,1 0,90V10A10,10 0,0,1 10,0Z"
+    );
+  }
 }
 
 @layer base {

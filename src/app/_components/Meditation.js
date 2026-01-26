@@ -55,8 +55,8 @@ const Meditation = () => {
     },
   ];
   return (
-    <section className="py-16 ">
-      <div className="container mx-auto px-6">
+    <section className="py-16 container mx-auto ">
+      <div className=" px-6">
         <h1 className="display-medium font-semibold text-text-primary-hero text-center mb-16 font-robotoslab">
           Why Practice Yoga & Meditation?
         </h1>
@@ -72,7 +72,7 @@ const Meditation = () => {
                     {item.description}
                   </p>
                 </div>
-                <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl">
+                <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl shrink-0">
                   <item.Icon className="w-10 h-10" />{" "}
                 </div>
               </div>
@@ -90,7 +90,7 @@ const Meditation = () => {
           <div className="flex flex-1 flex-col gap-18 md:items-start">
             {rightItems.map((item) => (
               <div key={item.id} className="flex items-center gap-4 text-left">
-                <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl">
+                <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl shrink-0">
                   <item.Icon className="w-10 h-10" />
                 </div>
                 <div className="flex flex-col gap-1">

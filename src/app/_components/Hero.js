@@ -8,17 +8,15 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <main className="bg-bg-button-primary/5 overflow-hidden">
-      <section className="relative container mx-auto px-6 md:px-12 py-16 flex flex-col-reverse md:flex-row items-center gap-12">
-        {/* Pattern */}
+      <section className="relative container mx-auto  py-16 flex flex-col-reverse md:flex-row items-center gap-12 ">
         <Image
           src={pattern}
           width={481}
           height={433}
           alt="Pattern"
-          className="absolute -top-20 -left-28 -z-10"
+          className="absolute -top-20 -left-38 -z-10"
         />
 
-        {/* Text */}
         <div className="flex-1 flex flex-col">
           <p className="text-lg flex items-center gap-2 bg-white w-fit py-2 px-4 rounded-full text-text-primary-hero font-semibold">
             Beginner-friendly
@@ -65,7 +63,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image */}
         <div className="flex-1 relative w-full h-120 overflow-hidden rounded-2xl">
           <Image
             src={heroImage}
