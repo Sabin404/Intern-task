@@ -4,9 +4,9 @@ import React from "react";
 
 const ProductCard = ({ title, image, desc, price }) => {
   return (
-    <div className="flex flex-col border rounded-xl overflow-hidden relative">
-      <button className="absolute top-5 right-5 z-10 bg-gray-200 bg-opacity-50 rounded-full p-2 ">
-        <Heart className="w-4 h-4 text-black" />
+    <div className="flex flex-col border rounded-3xl overflow-hidden relative">
+      <button className="absolute top-5 right-5 z-10 bg-gray-200 bg-opacity-50 rounded-full px-1.5 py-1.25 ">
+        <Heart className="w-3.5 h-3 text-black" />
       </button>
 
       <div className="relative w-full aspect-[92/65.25]">

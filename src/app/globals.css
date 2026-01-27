@@ -57,6 +57,7 @@
   --color-border-muted: #bbc9bf;
   --color-text-secondary-muted: #2d302d;
   --color-section-secondary: #e9dcc5;
+  --color-bg-secondary-muted: #a38c61;
   /* --text-head: 45px; */
 }
 
@@ -133,6 +134,70 @@
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
+}
+
+.curved_cutout {
+  min-height: 400px;
+  position: relative;
+  padding: 10px 20px;
+  isolation: isolate;
+  color: white;
+
+  &::after {
+    --circle-r: 14px /*input*/;
+    --big-circle-r: 20px /*input*/;
+    --pillar-size: max(34px /*input*/, var(--circle-r));
+    --card-color: #000 /*input*/;
+    --card-shadow: 0 10px 48px rgba(21, 44, 115, 0.15) /*input*/;
+
+    --circle-d: calc(var(--circle-r) * 2);
+    --circles-space: calc(var(--big-circle-r) + var(--pillar-size));
+    --circle-extend-inset: calc(var(--circle-r) + var(--circles-space));
+
+    content: "";
+    display: block;
+    opacity: 0.5;
+    inset: 0;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+    border-bottom-right-radius: 0;
+    filter: drop-shadow(var(--card-shadow));
+    background:
+      radial-gradient(
+          circle closest-side,
+          var(--card-color) 100%,
+          transparent calc(100% + 1px)
+        )
+        calc(100% - var(--circles-space)) 100% / var(--circle-d) var(--circle-d)
+        no-repeat no-repeat,
+      linear-gradient(0deg, var(--card-color) 100%, var(--card-color) 100%) 0px
+        100% / calc(100% - var(--circle-extend-inset)) var(--circle-d) no-repeat
+        no-repeat,
+      linear-gradient(0deg, var(--card-color) 100%, var(--card-color) 100%) 0px
+        calc(100% - var(--circle-r)) / calc(100% - var(--circles-space))
+        calc(100% - var(--circle-r)) no-repeat no-repeat,
+      radial-gradient(
+          circle closest-side,
+          var(--card-color) 100%,
+          transparent calc(100% + 1px)
+        )
+        100% calc(100% - var(--circles-space)) / var(--circle-d) var(--circle-d)
+        no-repeat no-repeat,
+      linear-gradient(0deg, var(--card-color) 100%, var(--card-color) 100%) 100%
+        0 / var(--circle-d) calc(100% - var(--circle-extend-inset)) no-repeat
+        no-repeat,
+      linear-gradient(0deg, var(--card-color) 100%, var(--card-color) 100%) 0
+        0 / calc(100% - var(--circle-r)) calc(100% - var(--circles-space))
+        no-repeat no-repeat,
+      radial-gradient(
+          circle at 100% 100%,
+          transparent var(--big-circle-r),
+          var(--card-color) calc(var(--big-circle-r) + 1px)
+        )
+        0px 0px / calc(100% - var(--pillar-size))
+        calc(100% - var(--pillar-size)) no-repeat no-repeat;
+  }
 }
 
 .dark {

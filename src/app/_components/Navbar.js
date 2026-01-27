@@ -6,7 +6,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="w-full bg-white border-b">
-      <div className="container mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+      <div className="container mx-auto  py-4 flex items-center justify-between">
         {/* Left */}
         <div className="flex items-center gap-10">
           <h1 className="text-2xl font-bold uppercase text-gray-800 flex items-center gap-2 cursor-pointer">
