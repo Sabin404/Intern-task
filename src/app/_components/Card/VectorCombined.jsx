@@ -1,22 +1,33 @@
 import Link from "next/link";
 import Graphic from "./Graphic";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
-const VectorCombined = ({ title, position = "bottom-right", link }) => {
+const VectorCombined = ({
+  color,
+  title,
+  position = "bottom-right",
+  bgColor,
+}) => {
   const isTopLeft = position === "top-left";
 
   return (
     <div
-      className={`bg-section-secondary  relative ${
+      className={`  relative ${
         isTopLeft ? "rounded-br-[18px]" : "rounded-tl-[22px]"
       }`}
     >
-      <div className={`px-4 pt-3 pb-2 ${isTopLeft ? "pb-3" : "pt-5"} `}>
-        {link ? (
-          <Link href="/" className="flex items-center gap-2 text-sm font-light">
-            <p>{title}</p>
-          </Link>
-        ) : (
+      <div className={`px-4 pt-3 pb-2 ${isTopLeft ? "pb-3" : "pt-6"} `}>
+        {title ? (
           <p className="title-medium font-roboto font-light ">{title}</p>
+        ) : (
+          <Button
+            size="icon"
+            variant="outline"
+            className={`bg-${color} rounded-full w-15 h-15 border-none  `}
+          >
+            <ArrowUpRight className="text-white w-8 h-8 " />
+          </Button>
         )}
       </div>
 
@@ -25,7 +36,7 @@ const VectorCombined = ({ title, position = "bottom-right", link }) => {
           isTopLeft ? "top-0 -right-4.5" : "bottom-0 -left-4.75 rotate-180"
         }`}
       >
-        <Graphic className={"text-section-secondary"} />
+        <Graphic style={{ color: bgColor }} />
       </div>
 
       <div
@@ -33,7 +44,7 @@ const VectorCombined = ({ title, position = "bottom-right", link }) => {
           isTopLeft ? "" : "-top-4.5 right-0 rotate-180"
         }`}
       >
-        <Graphic className={"text-section-secondary"} />
+        <Graphic style={{ color: bgColor }} />
       </div>
     </div>
   );

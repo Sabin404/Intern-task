@@ -1,11 +1,13 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PlayIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import VectorCard from "./Card/VectorCard";
+import yog from "@/images/explore-images/yog.png";
+import Image from "next/image";
 
 const Practice = () => {
   return (
-    <section className="w-full py-12 bg-section-secondary pt-20">
+    <section className="w-full py-12 bg-section-secondary pt-20 ">
       <div className="container mx-auto">
         <div className="mb-10 text-center md:text-left">
           <h2 className="display-medium font-robotoslab font-semibold text-text-primary-hero">
@@ -18,9 +20,31 @@ const Practice = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           <div className="flex-1 min-h-246.75 md:min-h-136.5 relative">
-            <VectorCard />
+            {/* center content */}
+            <div className="absolute inset-0 flex items-center z-10 justify-center  ">
+              <div className="bg-white/60 rounded-full p-10">
+                <PlayIcon className="w-6 h-7" fill="white" stroke="none" />
+              </div>
+            </div>
+
+            <div
+              className={`h-136.5 w-full lg:w-246.75 rounded-xl overflow-hidden relative   `}
+            >
+              <Image
+                alt="Yoga"
+                src={yog}
+                fill
+                className="object-cover yogo_curved bottom-right "
+              />
+
+              <div className="absolute right-3.25 bottom-5">
+                <p className="title-medium font-roboto  p-2 rounded-3xl text-black ">
+                  Short sessions • Beginner-friendly • No pressure
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Text Card */}

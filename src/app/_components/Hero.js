@@ -14,7 +14,7 @@ const Hero = () => {
           width={481}
           height={433}
           alt="Pattern"
-          className="absolute -top-20 -left-38 -z-10"
+          className="absolute -top-20 -left-55 -z-10"
         />
 
         <div className="flex-1 flex flex-col">
