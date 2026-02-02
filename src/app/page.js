@@ -7,6 +7,8 @@ import Product from "./_components/Product";
 import Practice from "./_components/Practice";
 import Sleep from "./_components/Sleep";
 import Lifestyle from "./_components/Lifestyle";
+import Blog from "./_components/Blog";
+import Subscribe from "./_components/Subscribe";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Practice />
       <Sleep />
       <Lifestyle />
+      <Blog />
+      <Subscribe />
     </>
   );
 }
