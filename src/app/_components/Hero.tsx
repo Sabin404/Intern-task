@@ -14,11 +14,11 @@ const Hero = () => {
           width={481}
           height={433}
           alt="Pattern"
-          className="absolute -top-20 -left-55 -z-10"
+          className=" absolute -top-2 -left-55 -z-10 "
         />
 
-        <div className="flex-1 flex flex-col">
-          <p className="text-lg flex items-center gap-2 bg-white w-fit py-2 px-4 rounded-full text-text-primary-hero font-semibold">
+        <div className="flex-1  flex-col">
+          <p className="text-lg font-roboto flex items-center gap-2 bg-white w-fit px-6 py-3 rounded-full text-text-primary-hero font-medium">
             Beginner-friendly
             <span className="w-1 h-1 bg-gray-300 rounded-full" />
             Short sessions
@@ -26,21 +26,27 @@ const Hero = () => {
             Practice at home
           </p>
 
-          <h1 className="display-lg  font-bold text-text-primary-hero leading-tight mt-4">
+          <h1 className="display-lg  font-robotoslab font-bold text-text-primary-hero leading-tight mt-4">
             A Gentle Start to <br /> Yoga & Meditation
           </h1>
 
-          <p className="text-gray-600 title-large max-w-xl mt-4 mb-6">
+          <p className="text-gray-600 title-large max-w-xl mt-4 mb-6 font-roboto">
             Gentle yoga and meditation for beginners and busy days. Learn and
             practice at your own pace.
           </p>
 
           <div className="flex flex-wrap gap-6">
-            <Button className="bg-bg-button-primary text-white body-large py-6 px-6 rounded-lg shadow-md flex items-center gap-2 hover:bg-bg-button-primary/90">
+            <Button
+              variant="default"
+              className="bg-bg-button-primary border border-bg-button-primary text-white title-medium px-6 py-6 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-bg-button-primary/90 h-14 hover:cursor-pointer"
+            >
               Start Practicing <ArrowRight size={18} />
             </Button>
 
-            <Button className="border border-bg-button-primary text-gray-800 title-medium  py-6 px-6 rounded-lg shadow-md hover:bg-bg-button-primary/10 flex items-center gap-2">
+            <Button
+              variant="default"
+              className="border border-bg-button-primary text-gray-800 title-medium  py-6 px-6 rounded-lg  hover:bg-bg-button-primary/10 flex items-center  justify-center gap-2 h-14 hover:cursor-pointer"
+            >
               Explore Categories <ArrowRight size={18} />
             </Button>
           </div>
@@ -55,7 +61,7 @@ const Hero = () => {
             ].map((item) => (
               <span
                 key={item}
-                className="px-3 py-1 rounded-full bg-bg-primary-muted text-gray-700 body-large "
+                className="px-3 py-2 rounded-[30px] bg-bg-primary-muted text-gray-700 body-large font-roboto "
               >
                 {item}
               </span>
@@ -63,7 +69,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-1 relative w-full h-120 overflow-hidden rounded-2xl">
+        <div className="flex-1 relative w-162.5 h-160.25 overflow-hidden rounded-2xl">
           <Image
             src={heroImage}
             alt="Yoga & Meditation"

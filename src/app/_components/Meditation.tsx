@@ -57,8 +57,7 @@ const Meditation = () => {
     },
   ];
   return (
-    <>
-      <section className="py-16 container mx-auto ">
+      <section className="py-16 container mx-auto lg:block hidden ">
         <div className=" px-6">
           <h1 className="display-medium font-semibold text-text-primary-hero text-center mb-16 font-robotoslab">
             Why Practice Yoga & Meditation?
@@ -68,7 +67,7 @@ const Meditation = () => {
               {leftItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-4 text-right"
+                  className="flex items-center gap-4 text-right min-h-22.5"
                 >
                   <div className="flex flex-col gap-1">
                     <h3 className="headline-small font-robotoslab font-semibold text-text-primary-hero whitespace-pre-line">
@@ -79,7 +78,9 @@ const Meditation = () => {
                     </p>
                   </div>
                   <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl shrink-0">
-                    <item.Icon className="w-10 h-10" />{" "}
+                    <div className="w-10 h-10">
+                      <item.Icon />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -92,7 +93,7 @@ const Meditation = () => {
                 width={360}
                 style={{ animationDuration: "15s" }}
                 height={360}
-                className="object-contain absolute -top-45 left-15 z-0 animate-spin "
+                className="object-contain absolute -top-45 left-15 z-0  "
               />
 
               {/* Front Image */}
@@ -105,14 +106,16 @@ const Meditation = () => {
               />
             </div>
 
-            <div className="flex flex-1 flex-col gap-18 md:items-start">
+            <div className="flex flex-1 flex-col gap-18 md:items-start  ">
               {rightItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-4 text-left"
+                  className="flex items-center gap-4 text-left min-h-22.5"
                 >
                   <div className="bg-bg-button-primary w-16 h-16 flex items-center justify-center rounded-xl shrink-0">
-                    <item.Icon className="w-10 h-10" />
+                    <div className="w-10 h-10">
+                      <item.Icon />
+                    </div>
                   </div>
                   <div className="flex flex-col gap-1">
                     <h3 className="headline-small font-robotoslab font-semibold text-text-primary-hero">
@@ -128,7 +131,6 @@ const Meditation = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 export default Meditation;

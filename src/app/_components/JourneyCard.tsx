@@ -1,10 +1,16 @@
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-const JourneyCard = ({ title, description, img }) => {
+type JourneyCardProps = {
+  title: string;
+  description: string;
+  img: StaticImageData;
+};
+
+const JourneyCard= ({ title, description, img }:JourneyCardProps) => {
   return (
-    <Card className="relative w-122.5 h-74.25 rounded-2xl overflow-hidden bg-border-muted/20 border border-border-muted text-white">
+    <Card className="relative w-auto h-74.25 rounded-2xl overflow-hidden bg-border-muted/20 border border-border-muted text-white">
       <div className="flex justify-between px-6 ">
         <h3 className="headline-small  font-semibold  font-robotoslab ">
           {title}

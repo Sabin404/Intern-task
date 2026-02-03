@@ -48,7 +48,7 @@ const Practice = () => {
           </div>
 
           {/* Right Text Card */}
-          <div className="relative flex flex-col gap-6 flex-1 p-4 text-white headline-medium min-h-75 md:min-h-136.5">
+          <div className="  hidden lg:relative lg:flex flex-col gap-6 flex-1 p-4 text-white headline-medium min-h-75 md:min-h-136.5">
             <svg
               viewBox="0 0 509 546"
               preserveAspectRatio="none"

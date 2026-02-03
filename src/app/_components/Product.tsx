@@ -19,6 +19,9 @@ const Product = () => {
       desc: "Yoga mat",
       price: "6000",
       image: ecogrip,
+      bestSeller: true,
+      sale: false,
+      newArrival: false,
     },
     {
       id: 2,
@@ -26,6 +29,9 @@ const Product = () => {
       desc: "Yoga mat",
       price: "5100",
       image: comfort,
+      sale: true,
+      bestSeller: false,
+      newArrival: false,
     },
     {
       id: 3,
@@ -33,6 +39,9 @@ const Product = () => {
       desc: "Meditation Cushion",
       price: "2500",
       image: meditation,
+      sale: false,
+      bestSeller: false,
+      newArrival: false,
     },
     {
       id: 4,
@@ -40,6 +49,9 @@ const Product = () => {
       desc: "Yoga Strap",
       price: "1800",
       image: yogaStrap,
+      newArrival: true,
+      sale: false,
+      bestSeller: false,
     },
     {
       id: 5,
@@ -47,6 +59,9 @@ const Product = () => {
       desc: "Meditation Accessory",
       price: "7500",
       image: handcraft,
+      sale: false,
+      bestSeller: true,
+      newArrival: false,
     },
     {
       id: 6,
@@ -54,6 +69,9 @@ const Product = () => {
       desc: "Meditation Accessory",
       price: "2200",
       image: calming,
+      sale: false,
+      bestSeller: false,
+      newArrival: false,
     },
     {
       id: 7,
@@ -61,6 +79,9 @@ const Product = () => {
       desc: "Meditation Accessory",
       price: "7500",
       image: handcraft,
+      sale: false,
+      bestSeller: false,
+      newArrival: false,
     },
     {
       id: 8,
@@ -68,35 +89,41 @@ const Product = () => {
       desc: "Meditation Accessory",
       price: "2200",
       image: calming,
+      sale: false,
+      bestSeller: false,
+      newArrival: true,
     },
   ];
 
   return (
-    <section className="container mx-auto py-12">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-        <h2 className="display-medium  font-semibold text-text-primary-hero">
-          Our Products
-        </h2>
-        <Button
-          className="flex items-center gap-2 font-medium title-medium"
-          variant="outline"
-        >
-          View all <ArrowRight className="w-4 h-4" />
-        </Button>
-      </div>
+    <div className="w-full bg-bg-button-primary/5">
+  <section className="container mx-auto py-12">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+      <h2 className="display-medium font-semibold text-text-primary-hero font-robotoslab">
+        Our Products
+      </h2>
+      <span className="flex items-center gap-2 font-medium text-text-primary-hero font-roboto title-medium">
+        View all <ArrowRight className="w-4 h-4" />
+      </span>
+    </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {products.map((p) => (
-          <ProductCard
-            key={p.id}
-            title={p.title}
-            image={p.image}
-            desc={p.desc}
-            price={p.price}
-          />
-        ))}
-      </div>
-    </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {products.map((p) => (
+        <ProductCard
+          key={p.id}
+          title={p.title}
+          image={p.image}
+          desc={p.desc}
+          price={p.price}
+          newArrival={p.newArrival}
+          sale={p.sale}
+          bestSeller={p.bestSeller}
+        />
+      ))}
+    </div>
+  </section>
+</div>
+
   );
 };
 

@@ -17,7 +17,7 @@ const Explore = () => {
           Explore Yoga Essentials
         </h2>
 
-        <p className="max-w-xl title-large text-text-secondary-muted">
+        <p className="max-w-xl title-large text-text-secondary-muted font-roboto">
           Everything you need to support your yoga and meditation practice, from
           daily movement to mindful moments.
         </p>
@@ -25,16 +25,16 @@ const Explore = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
         <div className="flex flex-col gap-6 ">
-          <CardContent image={yogamats} title="Yoga Mats" />
+          <CardContent image={yogamats } title="Yoga Mats" />
           <CardContent image={yogablocks} title="Yoga Blocks & Straps" />
         </div>
 
-        <div className="relative h-125 rounded-2xl overflow-hidden">
+        <div className="relative h-125 rounded-2xl overflow-hidden group hover:cursor-pointer">
           <Image
             src={meditation}
             alt="Meditation Cushions"
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />
           <Overlay title="Meditation Cushions" />
         </div>

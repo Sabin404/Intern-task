@@ -6,6 +6,7 @@ import {
   Source_Sans_3,
 } from "next/font/google";
 import "./globals.css";
+import { ReactNode } from "react";
 
 const googleSansFlex = Google_Sans_Flex({
   style: "normal",
@@ -40,7 +41,11 @@ export const metadata = {
   description: "A Next.js app for yoga and meditation enthusiasts.",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body

@@ -1,12 +1,19 @@
 import { Button } from "@/components/ui/button";
+import { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 import JourneyCard from "./JourneyCard";
 import img from "@/images/Vector.png";
 import img1 from "@/images/clock.png";
 import img2 from "@/images/hand.png";
 
+export interface JourneyCardProps {
+  title: string;
+  description: string;
+  img: StaticImageData;
+}
+
 const Journey = () => {
-  const cards = [
+  const cards: JourneyCardProps[] = [
     {
       title: "Choose Your \n Focus & Intention",
       description:
@@ -41,14 +48,14 @@ const Journey = () => {
 
         <div className="flex flex-col md:flex-row gap-6 justify-between">
           {cards.map((card, index) => (
-            <JourneyCard key={index} {...card} />
+            <JourneyCard  key={index} {...card} />
           ))}
         </div>
 
         <div className="flex justify-center mt-10">
           <Button
             variant="secondary"
-            className="rounded font-roboto title-medium py-5 px-6 gap-2 text-bg-button-primary "
+            className="rounded-lg font-roboto title-medium py-5 px-6 gap-2 text-bg-button-primary hover:cursor-pointer  h-14"
           >
             Start Your Journey
             <ArrowRight className="h-4 w-4" />
