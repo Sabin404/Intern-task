@@ -3,8 +3,6 @@ import image1 from "@/images/meditation/image1.jpg";
 import image2 from "@/images/meditation/image2.jpg";
 import image3 from "@/images/meditation/image3.jpg";
 import Image from "next/image";
-import VectorCard from "./Card/VectorCard";
-import VectorCombined from "./Card/VectorCombined";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 

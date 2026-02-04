@@ -23,7 +23,7 @@ const Lifestyle = () => {
   return (
     <section className="w-full py-16 bg-[#f7f8f7]">
       <div className="container mx-auto px-4 lg:px-0">
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-0">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-4 lg:gap-0">
           <h2 className="lg:text-[45px] text-[22px] font-semibold text-text-primary-hero font-robotoslab">
             Yoga Lifestyle
           </h2>
@@ -59,7 +59,7 @@ const Lifestyle = () => {
         </div>
 
         {/* Mobile version */}
-        <div className="flex flex-col gap-6 mt-8 lg:hidden">
+        <div className="flex flex-col items-center gap-6 mt-8 lg:hidden">
           {lifeStylesDemo.map((lifestyle) => (
             <div
               key={lifestyle.id}

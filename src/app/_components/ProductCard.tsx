@@ -24,7 +24,7 @@ const ProductCard = ({
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden relative">
       <button className="absolute top-3 right-3 lg:top-5 lg:right-5 z-10 flex items-center justify-center shrink-0 lg:w-7 lg:h-7 w-5 h-5 bg-gray-200 bg-opacity-50 rounded-[15px] px-1.5 py-1.25">
-        <Heart className="lg:w-3.5 lg:h-3 w-2.75 h-2.5 text-black" />
+        <Heart className="lg:w-3.5 lg:h-3 w-full h-2.5 text-black shrink-0" />
       </button>
       <div className="absolute left-3 top-3 lg:left-5 lg:top-5 z-10 flex flex-col gap-2">
         {newArrival && (
@@ -43,7 +43,7 @@ const ProductCard = ({
           </span>
         )}
       </div>
-      <div className="relative w-[173px] h-[135px]  lg:h-[261px] lg:w-full hover:scale-105 transition-transform duration-300 ease-in-out">
+      <div className="relative w-full h-[135px]  lg:h-[261px] lg:w-full hover:scale-105 transition-transform duration-300 ease-in-out">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
       <div className="p-3 lg:p-4 flex flex-col justify-between bg-white">

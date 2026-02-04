@@ -120,7 +120,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="text-gray-400 font-SourceSans3 lg:text-[16px]">
+          <div className="text-gray-400 font-SourceSans3 lg:text-[16px] text-center">
             © {new Date().getFullYear()} Yoga Meditation. All rights reserved.
           </div>
 
