@@ -24,7 +24,7 @@ const Footer = () => {
     { src: union, alt: "Union" },
   ];
   return (
-    <footer className="w-full bg-bg-footer text-white py-10">
+    <footer className="w-full bg-bg-footer text-white py-10 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-0">
         {/* Top sections */}
         <div className="flex flex-col gap-10 mb-10 lg:flex-row lg:justify-between">
@@ -40,7 +40,7 @@ const Footer = () => {
           </nav>
 
           <nav className="flex flex-col gap-6">
-            <h3 className="title-medium font-robotoslab font-semibold mb-3">
+            <h3 className="title-medium font-robotoslab font-semibold ">
               Yoga Lifestyle
             </h3>
             <ul className="lg:text-[16px] text-[14px] flex flex-col gap-4 lg:gap-5 font-roboto text-footer-text">
@@ -51,8 +51,8 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <nav className="flex flex-col gap-6">
-            <h3 className="title-medium font-robotoslab mb-3">Company</h3>
+          <nav className="flex flex-col gap-4">
+            <h3 className="title-medium font-robotoslab ">Company</h3>
             <ul className="lg:text-[16px] text-[14px] text-footer-text flex flex-col gap-4 lg:gap-5 font-roboto">
               <li>About Us</li>
               <li>Blog</li>
@@ -60,10 +60,8 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <nav className="flex flex-col gap-6">
-            <h3 className="title-medium font-robotoslab mb-3">
-              Company Services
-            </h3>
+          <nav className="flex flex-col gap-4">
+            <h3 className="title-medium font-robotoslab ">Company Services</h3>
             <ul className="lg:text-[16px] text-[14px] text-footer-text flex flex-col gap-4 lg:gap-5 font-roboto">
               <li>FAQs</li>
               <li>Return and Refund</li>
@@ -72,8 +70,8 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <nav className="flex flex-col gap-6">
-            <h3 className="title-medium font-robotoslab mb-3">Contact Info</h3>
+          <nav className="flex flex-col gap-4">
+            <h3 className="title-medium font-robotoslab ">Contact Info</h3>
             <address className="lg:text-[16px] text-[14px] text-footer-text flex flex-col gap-4 lg:gap-5 font-roboto not-italic">
               <div className="flex items-center gap-2">
                 <span>

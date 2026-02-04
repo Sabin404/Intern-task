@@ -78,13 +78,13 @@ const Sleep = () => {
         ))}
       </div>
 
-      {/* Mobile cards - horizontal scroll */}
+      {/* Mobile cards  */}
       <div className="lg:hidden overflow-x-auto scrollbar-hide mt-12">
         <div className="flex gap-4 px-4">
           {items.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 w-[340px] h-[320px] relative overflow-hidden rounded-lg cursor-pointer"
+              className="shrink-0 w-85 h-80 relative overflow-hidden rounded-lg cursor-pointer"
             >
               <Image
                 src={item.image}
@@ -93,7 +93,7 @@ const Sleep = () => {
                 className="object-cover section_curved_mobile bottom-right"
               />
               {/* overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black section_curved_mobile bottom-right" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/10 to-black section_curved_mobile bottom-right" />
               {/* arrow button */}
               <div className="absolute right-4 bottom-4">
                 <Button className="bg-bg-button-primary rounded-full w-14 h-14 border-none hover:cursor-pointer hover:bg-bg-button-primary/90">
@@ -111,6 +111,7 @@ const Sleep = () => {
               </div>
             </div>
           ))}
+          <div className="shrink-0 p-1" />
         </div>
       </div>
 

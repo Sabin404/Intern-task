@@ -176,9 +176,17 @@
   border-radius: var(--r);
 }
 
+.yogo_curved_mobile {
+  --r: 5px; /* radius */
+  --s: 10px; /* size of inner curve */
+  --x: 270px; /* horizontal offset (no percentange) */
+  --y: 20px; /* vertical offset (no percentange) */
+  border-radius: var(--r);
+}
+
 .section_curved {
-  --r: 32px; /* radius */
-  --s: 24px; /* size of inner curve */
+  --r: 40px; /* radius */
+  --s: 27px; /* size of inner curve */
   --x: 50px; /* horizontal offset (no percentange) */
   --y: 50px; /* vertical offset (no percentange) */
   border-radius: var(--r);
@@ -263,6 +271,16 @@
       "M10,0H90A10,10 0,0,1 100,10V79A4,4 0,0,1 96,83H50A4,4 0,0,0 46,87V96A4,4 0,0,1 42,100H10A10,10 0,0,1 0,90V10A10,10 0,0,1 10,0Z"
     );
   }
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 @layer base {

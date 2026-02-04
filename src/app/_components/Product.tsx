@@ -97,33 +97,31 @@ const Product = () => {
 
   return (
     <div className="w-full bg-bg-button-primary/5">
-  <section className="container mx-auto py-12">
-    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-      <h2 className="display-medium font-semibold text-text-primary-hero font-robotoslab">
-        Our Products
-      </h2>
-      <span className="flex items-center gap-2 font-medium text-text-primary-hero font-roboto title-medium">
-        View all <ArrowRight className="w-4 h-4" />
-      </span>
+      <section className="container mx-auto py-12 px-4 lg:px-0">
+        <div className="lg:flex lg:flex-row flex flex-row  justify-between lg:items-start items-center mb-8 gap-4">
+          <h2 className="text-[22px] lg:text-[45px] font-semibold text-text-primary-hero font-robotoslab">
+            Our Products
+          </h2>
+          <span className="flex items-center gap-2 font-medium text-text-primary-hero font-roboto text-[14px] lg:text-[18px] cursor-pointer">
+            View all <ArrowRight className="w-4 h-4" />
+          </span>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 hover:cursor-pointer">
+          {products.map((p) => (
+            <ProductCard
+              key={p.id}
+              title={p.title}
+              image={p.image}
+              desc={p.desc}
+              price={p.price}
+              newArrival={p.newArrival}
+              sale={p.sale}
+              bestSeller={p.bestSeller}
+            />
+          ))}
+        </div>
+      </section>
     </div>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      {products.map((p) => (
-        <ProductCard
-          key={p.id}
-          title={p.title}
-          image={p.image}
-          desc={p.desc}
-          price={p.price}
-          newArrival={p.newArrival}
-          sale={p.sale}
-          bestSeller={p.bestSeller}
-        />
-      ))}
-    </div>
-  </section>
-</div>
-
   );
 };
 

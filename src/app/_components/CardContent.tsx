@@ -1,17 +1,18 @@
 import Image, { StaticImageData } from "next/image";
 import Overlay from "./Overlay";
 
+type type = {
+  image: string | StaticImageData;
+  title: string;
+  height?: string;
+  width?: string;
+};
 
-
- type type ={
- image:string | StaticImageData;
-  title: string,
-}
-
-
-const CardContent = ({ image, title }: type) => {
+const CardContent = ({ image, title, height, width }: type) => {
   return (
-    <div className="relative h-60 rounded-2xl overflow-hidden group hover:cursor-pointer">
+    <div
+      className={`relative lg:h-60 ${height} ${width} lg:w-full  rounded-2xl overflow-hidden group hover:cursor-pointer`}
+    >
       <Image
         src={image}
         alt={title}

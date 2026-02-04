@@ -8,16 +8,16 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <main className="bg-bg-button-primary/5 overflow-hidden">
-      <section className="relative container mx-auto  py-16 flex flex-col-reverse md:flex-row items-center gap-12 ">
+      {/* Desktop Version - unchanged */}
+      <section className="hidden lg:flex relative container mx-auto py-16 flex-row items-center gap-12">
         <Image
           src={pattern}
           width={481}
           height={433}
           alt="Pattern"
-          className=" absolute -top-2 -left-55 -z-10 "
+          className="absolute -top-2 -left-55 -z-10"
         />
-
-        <div className="flex-1  flex-col">
+        <div className="flex-1 flex-col">
           <p className="text-lg font-roboto flex items-center gap-2 bg-white w-fit px-6 py-3 rounded-full text-text-primary-hero font-medium">
             Beginner-friendly
             <span className="w-1 h-1 bg-gray-300 rounded-full" />
@@ -25,16 +25,13 @@ const Hero = () => {
             <span className="w-1 h-1 bg-gray-300 rounded-full" />
             Practice at home
           </p>
-
-          <h1 className="display-lg  font-robotoslab font-bold text-text-primary-hero leading-tight mt-4">
+          <h1 className="display-lg font-robotoslab font-bold text-text-primary-hero leading-tight mt-4">
             A Gentle Start to <br /> Yoga & Meditation
           </h1>
-
           <p className="text-gray-600 title-large max-w-xl mt-4 mb-6 font-roboto">
             Gentle yoga and meditation for beginners and busy days. Learn and
             practice at your own pace.
           </p>
-
           <div className="flex flex-wrap gap-6">
             <Button
               variant="default"
@@ -42,15 +39,13 @@ const Hero = () => {
             >
               Start Practicing <ArrowRight size={18} />
             </Button>
-
             <Button
               variant="default"
-              className="border border-bg-button-primary text-gray-800 title-medium  py-6 px-6 rounded-lg  hover:bg-bg-button-primary/10 flex items-center  justify-center gap-2 h-14 hover:cursor-pointer"
+              className="border border-bg-button-primary text-gray-800 title-medium py-6 px-6 rounded-lg hover:bg-bg-button-primary/10 flex items-center justify-center gap-2 h-14 hover:cursor-pointer"
             >
               Explore Categories <ArrowRight size={18} />
             </Button>
           </div>
-
           <div className="flex flex-wrap gap-2 mt-6">
             {[
               "Beginner Yoga",
@@ -61,14 +56,13 @@ const Hero = () => {
             ].map((item) => (
               <span
                 key={item}
-                className="px-3 py-2 rounded-[30px] bg-bg-primary-muted text-gray-700 body-large font-roboto "
+                className="px-3 py-2 rounded-[30px] bg-bg-primary-muted text-gray-700 body-large font-roboto"
               >
                 {item}
               </span>
             ))}
           </div>
         </div>
-
         <div className="flex-1 relative w-162.5 h-160.25 overflow-hidden rounded-2xl">
           <Image
             src={heroImage}
@@ -78,6 +72,50 @@ const Hero = () => {
             style={{ objectPosition: "100% center" }}
             priority
           />
+        </div>
+      </section>
+
+      {/* Mobile Version */}
+      <section className="lg:hidden  relative  flex flex-col mb-8">
+        {/* Background Image */}
+        <div className="absolute inset-0 ">
+          <Image
+            src={heroImage}
+            alt="Yoga & Meditation"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
+        </div>
+
+        <div className="relative z-10 flex flex-col justify-center h-full px-4 py-4">
+          <p className="text-[12px] w-[300px] h-[28px] font-roboto flex items-center gap-2 bg-white px-2 py-4 rounded-full text-text-primary-hero font-medium mb-4">
+            Beginner-friendly • Short sessions • Practice at home
+          </p>
+
+          <h1 className="text-[28px] font-robotoslab font-bold text-white leading-tight mb-3">
+            A Gentle Start to <br />
+            Yoga & Meditation
+          </h1>
+
+          <p className="text-[#D9E1DB] text-[14px] font-normal mb-6 font-roboto max-w-md">
+            Gentle yoga and meditation for beginners and busy days. Learn and
+            practice at your own pace.
+          </p>
+
+          <div className="flex gap-3 items-center">
+            <Button className="h-12 px-3 py-4 text-[14px] bg-bg-button-primary font-roboto">
+              Start Practicing <ArrowRight size={20} />
+            </Button>
+
+            <Button
+              variant="outline"
+              className="h-12 px-2 py-2 text-[14px] font-roboto"
+            >
+              Explore Categories <ArrowRight size={20} />
+            </Button>
+          </div>
         </div>
       </section>
     </main>
