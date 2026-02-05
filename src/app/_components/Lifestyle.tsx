@@ -46,7 +46,7 @@ const Lifestyle = () => {
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-800"
               />
-              <div className="absolute top-88.75 left-6 rounded-4xl p-6 bg-white py-4 px-6 w-175 h-29">
+              <div className="absolute top-88.75 left-1/2 -translate-x-1/2 rounded-4xl  bg-white py-4 px-6 w-[95%] mx-auto  h-29">
                 <h3 className="text-[22px] font-robotoslab text-text-primary-hero font-bold">
                   {lifestyle.title}
                 </h3>
