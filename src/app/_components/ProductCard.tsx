@@ -24,7 +24,10 @@ const ProductCard = ({
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden relative">
       <button className="absolute top-3 right-3 lg:top-5 lg:right-5 z-10 flex items-center justify-center shrink-0 lg:w-7 lg:h-7 w-5 h-5 bg-gray-200 bg-opacity-50 rounded-[15px] px-1.5 py-1.25">
-        <Heart className="lg:w-3.5 lg:h-3 w-full h-2.5 text-black shrink-0" />
+        <Heart
+          size={20}
+          className="lg:w-full lg:h-fit w-full h-2.5 text-black shrink-0 "
+        />
       </button>
       <div className="absolute left-3 top-3 lg:left-5 lg:top-5 z-10 flex flex-col gap-2">
         {newArrival && (
