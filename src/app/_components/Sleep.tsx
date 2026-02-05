@@ -42,7 +42,7 @@ const Sleep = () => {
         </div>
       </div>
 
-      {/* Desktop cards - unchanged */}
+      {/* Desktop cards */}
       <div className="hidden lg:flex gap-4 justify-center mt-12 flex-wrap px-4">
         {items.map((item) => (
           <div
